@@ -1,0 +1,32 @@
+{
+    "Qualificacoes": [
+        {
+          "curso": "Desenvolvedor Backend",
+          "complemento": "(Softex, 276h/a, conclusão em dezembro/2022)"        
+        },
+        {
+            "curso": "Geração Tech Unimed-BH - Ciência de Dados",
+            "complemento": "(Dio. 126h/a, conclusão em dezembro/2022)"   
+        },
+        {
+            "curso": "Comandos DML: manipulação de dados com MySQL",
+            "complemento": "(Alura, 10h/a, conclusão em 2022)"   
+        },
+        {
+            "curso": "Consultas Avançadas SQL com MYSQL",
+            "complemento": "(Alura, 14h/a, conclusão em 2022)"   
+        },
+        {
+            "curso": "Introdução ao SQL com MYSQL: Manipulação e Consulta de Dados",
+            "complemento": "(Alura, 12h/a, conclusão em 2021)"   
+        },
+        {
+            "curso": "Curso Básico de Gerenciamento de Projetos",
+            "complemento": "(Project Management Institute, 24h/a, conclusão em 2019)"   
+        },
+        {
+            "curso": "Excel Intensivo",
+            "complemento": "(CEBIP, 12 h/a, conclusão em 2014)"   
+        }
+    ]
+} 
