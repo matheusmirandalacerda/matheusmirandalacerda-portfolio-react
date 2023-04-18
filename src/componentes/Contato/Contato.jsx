@@ -8,7 +8,31 @@ function Contato() {
 
   function enviarFormulario(event) {
     event.preventDefault();
+
     console.log("Formulário enviado!");
+
+    const texto = `Nome: ${nome}\nE-mail: ${email}\nTelefone: ${telefone}\nMensagem: ${mensagem}`;
+
+    const numeroWhatsApp = import.meta.env.VITE_WHATSAPP_NUMBER; //número do whatsapp para o qual a mensagem será enviada
+
+    const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encondeURIComponent(
+      texto
+    )}`;
+
+    window.open(linkWhatsApp, "_blank");
+  }
+
+  function mascaraTelefone(event) {
+    const texto = event.target.value;
+    const textoApenasNumero = texto.replace(/\D/g, '').substring(0, 11);
+
+    let telefoneFormato = textoApenasNumero.replace(/^(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+
+    if (textoApenasNumero.length < 11) {
+      telefoneFormato = textoApenasNumero.replace(/^(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+    }
+
+    setTelefone(telefoneFormato);
   }
 
   return (
@@ -37,7 +61,7 @@ function Contato() {
                 email="input-email"
                 id="input-email"
                 required
-                value = {email}
+                value={email}
                 onChange={(event) => setTelefone(event.target.value)}
               />
             </fieldset>
@@ -52,8 +76,8 @@ function Contato() {
                 required
                 pattern="^\(\d{2}\) \d{5}-\d{4}$"
                 maxLength="15"
-                value = {telefone}
-                onChange={(event) => setEmail(event.target.value)}
+                value={telefone}
+                onChange={mascaraTelefone}
               />
             </fieldset>
 
@@ -64,7 +88,7 @@ function Contato() {
                 id="input-msg"
                 cols="30"
                 rows="10"
-                value = {mensagem}
+                value={mensagem}
                 onChange={(event) => setMensagem(event.target.value)}
               ></textarea>
             </fieldset>
