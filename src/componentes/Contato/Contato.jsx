@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import "./Contato.css";
+
 function Contato() {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
@@ -37,10 +39,8 @@ function Contato() {
 
   return (
     <main>
-      {nome}
-      <div classNameName="formulario">
+      <div className="formulario">
         <form onSubmit={enviarFormulario}>
-          <form action="">
             <fieldset>
               <label htmlFor="input-nome">Nome</label>
               <input
@@ -62,7 +62,7 @@ function Contato() {
                 id="input-email"
                 required
                 value={email}
-                onChange={(event) => setTelefone(event.target.value)}
+                onChange={(event) => setEmail(event.target.value)}
               />
             </fieldset>
 
@@ -92,15 +92,28 @@ function Contato() {
                 onChange={(event) => setMensagem(event.target.value)}
               ></textarea>
             </fieldset>
-          </form>
-
-          <center>
+            <center>
             <input type="submit" value="ENVIAR" className="button" />
           </center>
-        </form>
-      </div>
+            </form>
+
+         
+        
+      
+
+      <section> 
+    <h2>Contato</h2>
+    <p>Telefone: (81) 9 9999-0763<br></br>
+    E-mail: matheus.miranda@hotmail.com<br></br>
+    Github: <a target = "_blank" href = "https://github.com/matheusmirandalacerda">github.com/matheusmirandalacerda</a><br></br>
+    LINKEDIN: <a target = "_blank" href = "https://www.linkedin.com/in/matheus-miranda-lacerda-93b7a61b7/">linkedin.com/in/matheus-miranda-lacerda-93b7a61b7</a></p>
+    </section>
+    </div>
     </main>
+
+    
   );
+
 }
 
 export default Contato;

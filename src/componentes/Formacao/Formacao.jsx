@@ -14,11 +14,6 @@ function Formacao() {
             {item.curso} {item.instituicao} {item.dataFim} 
           </li>
         ))}  
-
-        {/*· Pós-Graduação em Administração Financeira / conclusão
-        em 2020. (Unicesumar)<br></br> · Gestão Financeira / conclusão em 2020.
-        (Unicesumar)<br></br> · Logística / conclusão em 2015. (UNINTER)<br></br> · Auxiliar
-  Administrativo / conclusão em 2012. (SENAC)*/}
   
       </section>
     </main>

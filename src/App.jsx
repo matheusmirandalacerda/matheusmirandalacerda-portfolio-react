@@ -9,8 +9,8 @@ import Resumo from "./componentes/Resumo/Resumo";
 import Formacao from "./componentes/Formacao/Formacao";
 import Experiencias from "./componentes/Experiencias/Experiencias";
 import Qualificacoes from "./componentes/Qualificacoes/Qualificacoes";
-//import Portfolio from "./componentes/Portfolio/Portfolio";
-import Contato_Pessoal from "./componentes/Contato_Pessoal/Contato_Pessoal";
+import Portfolio from "./componentes/Portfolio/Portfolio";
+import Contato from "./componentes/Contato/Contato";
 import Rodape from "./componentes/Rodape/Rodape";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -24,14 +24,14 @@ function App() {
 
       <BarraNavegacao></BarraNavegacao>
 
-        {/*<Routes>
-          <Route index element={<Experiencias />} />
+        <Routes>
+          <Route index element={<Resumo />} />
           <Route path="experiencias" element={<Experiencias />} />
           <Route path="portfolio" element={<Portfolio />} />
-          <Route path="contato" element={<Contato />} />
+          <Route path="contato" element={<Contato/>} />
           <Route path="qualificacoes" element={<Qualificacoes />} />
           <Route path="formacao" element={<Formacao />} />
-  </Routes>*/}
+  </Routes>
 
       </BrowserRouter>
 
@@ -39,8 +39,8 @@ function App() {
       <Formacao></Formacao>
       <Experiencias></Experiencias>
       <Qualificacoes></Qualificacoes>
-      {/*<Portfolio></Portfolio>*/}
-      <Contato_Pessoal></Contato_Pessoal>
+      <Portfolio></Portfolio>
+      <Contato></Contato>
       <Rodape></Rodape>
     </>
   );
